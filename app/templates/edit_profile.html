@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky - Edit Profile{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+	<h1>编辑用户资料</h1>
+</div>
+<table>
+	<tr valign="left">
+		<td width="50%"><img src="..\static\picture\users\{{pictureName}}" width="300dp" height="300dp"></td>
+		<td width="50%">{{ wtf.quick_form(form) }}</td>
+	</tr>	
+</table>
+{% endblock %}

@@ -1,0 +1,22 @@
+<ul class="users">
+	{% for user in users %}
+	<li class="user">
+		<div class="user-content">
+			<table>
+				<tr valign="top">
+					<td>
+						<h3>姓名：{{ user.username }}</h3>
+						<div class="user-grade">年级：{{ user.grade }}</div>
+						<div class="user-sex">性别：{{ user.sex }}</div>
+						<div class="user-footer">
+							<a href="{{ url_for('.edit_profile_admin',id=user.id) }}">
+								<span class="label label-primary">编辑</span>
+							</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</li>
+	{% endfor %}
+</ul>
